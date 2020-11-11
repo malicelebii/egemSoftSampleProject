@@ -19,7 +19,7 @@ router.get('/:id', (req, res) => {
 
 
 router.get("/", (req, res) => {
-   Product.find()
+   let products = Product.find()
    .then(products=>res.json(products))
    .catch(err=>console.log(err))
    
