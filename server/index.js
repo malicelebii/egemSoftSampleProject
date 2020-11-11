@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
-const path =require('path')
+
 const cors = require("cors");
 
 const server = require("http").createServer(app);
@@ -43,9 +43,9 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 
   // index.html for all page routes
-  app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
-  });
+  // app.get("*", (req, res) => {
+  //   res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+  // });
 }
 
 app.use('/api/products', require('./routes/products'));
