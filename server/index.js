@@ -23,25 +23,7 @@ app.use(cors());
 
 io.on("connection", socket => {
 
-  // socket.on("Product", data => {
-  //   connect.then(db => {
-  //     try {
-  //         let product = new Product({ name: data.name,img:data.img,price:data.price,stock:data.stock })
-
-  //         product.save((err, doc) => {
-  //           if(err) return res.json({ success: false, err })
-
-  //           Product.find()
-  //           .exec((err, doc)=> {
-
-  //               return io.emit("Product", doc);
-  //           })
-  //         })
-  //     } catch (error) {
-  //       console.error(error);
-  //     }
-  //   })
-  //  })
+  
 
 
    socket.on('add', data => socket.broadcast.emit('add', data));
