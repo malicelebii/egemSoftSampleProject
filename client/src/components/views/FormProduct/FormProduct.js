@@ -105,6 +105,7 @@ class FormProduct extends Component {
   render() {
     return (
       <Form  onSubmit={this.handleSubmit}>
+        <Form.Label>Name</Form.Label>
         <Form.Control
           label='Name'
           type='text'
@@ -114,6 +115,7 @@ class FormProduct extends Component {
           value={this.state.name}
           onChange={this.handleInputChange}
         />
+        <Form.Label>Image Link</Form.Label>
         <Form.Control
           label='Name'
           type='text'
@@ -123,6 +125,7 @@ class FormProduct extends Component {
           value={this.state.img}
           onChange={this.handleInputChange}
         />
+<Form.Label>Price</Form.Label>
         <Form.Control
           label='Price'
           type='number'
@@ -131,6 +134,7 @@ class FormProduct extends Component {
           value={this.state.price}
           onChange={this.handleInputChange}
         />
+        <Form.Label>Stock</Form.Label>
         <Form.Control
           label='Stock'
           type='number'
@@ -139,7 +143,7 @@ class FormProduct extends Component {
           value={this.state.stock}
           onChange={this.handleInputChange}
         />
-           <Form.Label>Example select</Form.Label>
+           <Form.Label>Category</Form.Label>
                   <Form.Control
                     as="select"
                     id="category"
