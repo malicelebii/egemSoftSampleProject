@@ -8,7 +8,7 @@ export class LandingPage extends Component {
   constructor() {
     super();
 
-    this.server = "http://localhost:5000";
+    this.server = "https://egemsoftsample.herokuapp.com";
     this.socket = io.connect(this.server);
 
     this.state = {
