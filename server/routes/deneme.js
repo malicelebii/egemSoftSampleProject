@@ -104,7 +104,7 @@ router.get("/kopazargb", async (req, res) => {
       }
     );
   setTimeout(() => {
-    request(server.kopazarUri, (error, response, html) => {
+    request("https://www.kopazar.com/knight-online-gold-bar", (error, response, html) => {
       if (!error && response.statusCode == 200) {
         const $ = cheerio.load(html);
   
