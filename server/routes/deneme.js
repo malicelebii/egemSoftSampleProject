@@ -59,9 +59,23 @@ router.get("/1", (req, res) => {
 
 router.get("/bynogamegb", (req, res) => {
   const asd = {};
-
+  var options = {
+    proxy: process.env.QUOTAGUARDSTATIC_URL,
+    url: 'https://www.bynogame.com/oyunlar/knight-online/premium-cash',
+    headers: {
+        'User-Agent': 'node.js'
+    }
+};
+var options2 = {
+    proxy: process.env.QUOTAGUARDSTATIC_URL,
+    url: 'https://www.bynogame.com/Oyunlar/knight-online/gold-bar',
+    headers: {
+        'User-Agent': 'node.js'
+    }
+};
+    
   request(
-    "https://www.bynogame.com/oyunlar/knight-online/premium-cash",
+    options,
     (error, response, html) => {
       if (!error && response.statusCode == 200) {
         const $ = cheerio.load(html);
@@ -80,7 +94,7 @@ router.get("/bynogamegb", (req, res) => {
   );
 
   request(
-    "https://www.bynogame.com/oyunlar/knight-online/gold-bar",
+    options2,
     (error, response, html) => {
       if (!error && response.statusCode == 200) {
         const $ = cheerio.load(html);
