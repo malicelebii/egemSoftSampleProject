@@ -53,7 +53,7 @@ router.get("/1", (req, res) => {
     };
     console.log(json);
     await browser.close();
-    res.json(json);
+    res.send("asd");
   })();
 });
 
