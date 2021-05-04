@@ -49,6 +49,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 app.use('/api/products', require('./routes/products'));
+app.use('/deneme', require('./routes/deneme'));
 
 const port = process.env.PORT || 5000
 
