@@ -17,6 +17,10 @@ router.get('/:id', (req, res) => {
      });
  });
 
+ router.get('/asd', (req, res) => {
+  res.json({asd:"asd"})
+}); 
+
 
 router.get("/", (req, res) => {
    let products = Product.find()
